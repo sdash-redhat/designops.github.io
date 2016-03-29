@@ -1,2 +1,3 @@
 # designops.github.io
-code for DesignOps.whatever
+
+## 👉 [designops.github.io](http://designops.github.io/)

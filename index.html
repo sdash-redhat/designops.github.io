@@ -1,29 +1,214 @@
-<style>
-  body {
-    font-family: sans-serif;
-    padding: 2em 5em;
-  }
-</style>
+<html>
+  <head>
+    <meta charset="utf-8" />
 
-<h1>Hello at DesignOps </h1>
+    <style type="text/css">
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body, html {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 100;
+        text-align: center;
+        overflow-x: hidden;
+      }
+
+    .one, .two, .three, .four {
+      outline: 1px solid #001f3f;
+      position: relative;
+      padding: 1em;
+      color:  #DDDDDD;
+      background-position: center;
+      background-size: cover;
+      line-height: 1.3;
+
+    }
+
+    .one {
+      background-image: url(https://cdn-images-1.medium.com/max/2000/1*RbwXg-OMlJTG7iiHs4NMQg.jpeg);
+    }
+    .two {
+      background-image: url(https://cdn-images-1.medium.com/max/2000/1*lQ7MWNFHBp-fw_ZN4faW-g.jpeg);
+    }
+    .three {
+      background-image: url(lds.png);
+    }
+    .four {
+      background-image: url(laser.jpg);
+    }
+    .four p {
+      margin-top: 0;
+    }
+    .content {
+      padding: 1em;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: hsla(0, 0%, 0%, 0.5);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .four .content {
+      background-color: hsla(0, 0%, 0%, 0.7);
+    }
+
+    .text {
+      display: inline-block;
+    }
+
+    .footer {
+      padding: 0.5em 0;
+      clear: both;
+    }
+
+    .credits, .coc {
+      font-size: 16px;
+      padding:0 4em;
+      text-align: center;
+      clear: both;
+    }
+
+    /* p {
+      padding: 0;
+      margin-bottom: 0.5em;
+    }*/
 
 
-<h2>Read</h2>
-  <ul>
-  <li><a href="https://medium.com/@kaelig/introducing-design-systems-ops-7f34c4561ba7#.s0l2kwuyn">Introducing Design Systems Ops — Medium</a></li>
-  <li>
-    <a href="https://medium.com/@filtercake/design-ops-for-all-of-us-e3dd78c48b42#.mv8rkjlvm">Design Ops — for all of us — Medium</a>
-  </ul>
+    a {
+      font-weight: 900;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+      color:  #111111;
+    }
+
+    .viewport a:link, .viewport a:visited, .viewport a:hover, .viewport a:active {
+      color:  #DDDDDD;
+    }
 
 
-<h2>Join</h2>
+    .cta {
+      display: inline-block;
+      padding: 0.2em 0.8em;
+      border-radius: 0.1em;
+      border: 3px solid #DDDDDD;
+      font-size: 0.5em;
+    }
 
-  <ul>
+    .cta:link, .cta:hover, .cta:visited {
+      text-decoration: none;
+    }
 
-    <li>
-      <a href="https://github.com/DesignOps/discussion/issues/1">
-        ...the discussion
-      </a>
-    </li>
+    @media screen and (orientation:landscape) {
 
-  </ul>
+      html { font-size: 4vw; }
+        .one, .two, .three, .four {
+        width: 50vw;
+        height: 50vh;
+        float: left;
+        min-height: 5em;
+      }
+      .viewport {
+        width: 100vw;
+      }
+
+      .four .cta:nth-child(3) {
+        margin-top: 0.5em;
+      }
+
+
+    }
+
+    @media screen and (orientation:portrait) {
+      html { font-size: 6vw; }
+
+      .one, .two, .three, .four {
+        height: 25vh;
+      }
+
+      .four .cta:nth-child(3) {
+        margin-left: 0.5em;
+      }
+
+
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div class="viewport">
+
+      <div class="one">
+        <div class="content">
+
+          <div class="text">
+            Read <a href="https://medium.com/@kaelig/introducing-design-systems-ops-7f34c4561ba7#.s0l2kwuyn">Introducing Design Systems Ops</a> on Medium
+          </div>
+
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="content">
+          <div class="text">
+            Read <a href="https://medium.com/@filtercake/design-ops-for-all-of-us-e3dd78c48b42#.mv8rkjlvm">Design Ops for all of us</a> on Medium
+          </div>
+        </div>
+      </div>
+
+      <div class="three">
+        <div class="content">
+          <div class="text">
+            Watch <a href="https://www.youtube.com/watch?v=-CRp5Cx7NZw">Living Design Systems</a> on YouTube
+          </div>
+
+        </div>
+      </div>
+
+      <div class="four">
+        <div class="content">
+          <div class="text">
+            <p>What is DesignOps?</p>
+            <a class="cta" href="https://github.com/DesignOps/discussion/issues/1">Join the discussion</a>
+
+            <a class="cta" href="https://github.com/DesignOps/designops-weekly-submit">Submit a resource</a>
+            <!--
+            https://www.flickr.com/photos/dmuth/2917129508/in/photolist-5rM3Ym-rQUFLV-nWAXjG-5rM4HE-5rGHEP-5rM5B1-4aKXAx-d3cioJ-5rGHaR-wd2K5-78Ts-8S8ZfC-p4XpUh-ao4TWX-p2QQ2y-5rZSP7-7PFzQQ-9e8KJw-7PFgFS-c5TMjJ-gmdt-7PBwf2-r1ToSA-5Yohz3-5FP1GM-5rGHVx-4TZJei-5rGJut-7b9Wp9-8KUpro-5j6K1j-8KUp4L-8KRjG4-5Mit7F-7PFtKY-7PBwUV-5ciJYy-9g3JpA-5MnK2y-98WGL8-98ZQfG-98WFZF-98WN9t-98ZQ9C-9h2ttL-fbNwHJ-98WGca-2Fvf7W-8CLegb-9h2t7o
+             -->
+          </div>
+        </div>
+      </div>
+    </div> <!-- viewport -->
+
+
+    <div class="footer">
+      <p class="credits">
+        A Code of Conduct <a href="">is in progress</a>.
+      </p>
+
+
+
+      <p class="credits">
+        Code for this site by <a href="https://github.com/DesignOps/designops.github.io/graphs/contributors">the comitters</a>. Please <a href="https://github.com/DesignOps/designops.github.io/issues/new">share your thoughts about this site</a> and <a href="https://github.com/DesignOps/discussion/issues/new">on DesignOps in general</a>.</p>
+
+      <p class="credits">
+        Hosted at <a href="https://github.com/DesignOps/designops.github.io">GitHub</a>. Photos: <a href="https://en.wikipedia.org/wiki/San_Francisco#/media/File:Golden_Gate_Bridge,_SF_(cropped).jpg">Bernard Gagnon, CC BY-SA</a>, <a href="https://www.flickr.com/photos/greencolander/83399376/in/photolist-8nrJh-puYRb6-pG68Sa-6iPxHJ-4TsPGD-aKYLfe-NpGc8-6aaY9h-ftX6kL-ib7vRZ-6QxL9-ghQUci-aPSBPX-ftGKcP-eoiEk2-a4di3w-8krwoN-6r5A9i-dJnbXW-bgR1CT-6QgEp9-5jKjQS-ftGKMr-cnE6B1-4n2SfX-CNmhwX-73AvHb-cnE6vq-4SWsnX-2NaHF3-ftGKsR-34vt5y-Qg4dY-ftGKz4-7GMFTW-8aTk2M-bWrsuq-XZzYD-anG9Yu-4cKiTq-s2if5B-n5YweN-umwPN4-4YcrZQ-2fMQGZ-5pKEFM-ydosEE-5kiV5N-eodHku-y4zxZH" data-href="https://www.flickr.com/photos/greencolander/83399376/in/photolist-8nrJh-puYRb6-pG68Sa-6iPxHJ-4TsPGD-aKYLfe-NpGc8-6aaY9h-ftX6kL-ib7vRZ-6QxL9-ghQUci-aPSBPX-ftGKcP-eoiEk2-a4di3w-8krwoN-6r5A9i-dJnbXW-bgR1CT-6QgEp9-5jKjQS-ftGKMr-cnE6B1-4n2SfX-CNmhwX-73AvHb-cnE6vq-4SWsnX-2NaHF3-ftGKsR-34vt5y-Qg4dY-ftGKz4-7GMFTW-8aTk2M-bWrsuq-XZzYD-anG9Yu-4cKiTq-s2if5B-n5YweN-umwPN4-4YcrZQ-2fMQGZ-5pKEFM-ydosEE-5kiV5N-eodHku-y4zxZH" class="markup--anchor markup--figure-anchor" rel="nofollow">Michelle Tribe, CC BY-SA</a>, <a href="https://www.flickr.com/photos/dmuth/2917129508/in/photolist-5rM3Ym-rQUFLV-nWAXjG-5rM4HE-5rGHEP-5rM5B1-4aKXAx-d3cioJ-5rGHaR-wd2K5-78Ts-8S8ZfC-p4XpUh-ao4TWX-p2QQ2y-5rZSP7-7PFzQQ-9e8KJw-7PFgFS-c5TMjJ-gmdt-7PBwf2-r1ToSA-5Yohz3-5FP1GM-5rGHVx-4TZJei-5rGJut-7b9Wp9-8KUpro-5j6K1j-8KUp4L-8KRjG4-5Mit7F-7PFtKY-7PBwUV-5ciJYy-9g3JpA-5MnK2y-98WGL8-98ZQfG-98WFZF-98WN9t-98ZQ9C-9h2ttL-fbNwHJ-98WGca-2Fvf7W-8CLegb-9h2t7o">Douglas Muth, CC BY-SA</a>
+      </p>
+    </div>
+
+  </body>
+
+</html>
