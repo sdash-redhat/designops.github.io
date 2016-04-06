@@ -58,12 +58,53 @@
       justify-content: center;
     }
 
+    .content:after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        z-index: 0;
+
+        box-shadow: inset 0 0 100px hsla(0, 0%, 0%, 0.3);
+        opacity: 0.1;
+
+        transition: opacity 300ms ease-out;
+
+    }
+
+    .content:hover:after,
+    .content:focus:after,
+    .content:active:after {
+        opacity: 1;
+    }
+
+    .content:hover .text,
+    .content:focus .text,
+    .content:active .text {
+        transform: scale(1.01);
+    }
+
     .four .content {
       background-color: hsla(0, 0%, 0%, 0.7);
     }
 
     .text {
       display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      transition: transform 300ms ease-out;
+    }
+
+    .content  {
+        text-decoration: none;
+    }
+
+    .content strong {
+        text-decoration: underline;
     }
 
     .footer {
@@ -83,11 +124,6 @@
       margin-bottom: 0.5em;
     }*/
 
-
-    a {
-      font-weight: 900;
-    }
-
     a:link, a:visited, a:hover, a:active {
       color:  #111111;
     }
@@ -96,6 +132,9 @@
       color:  #DDDDDD;
     }
 
+    .footer a {
+        font-weight: 900;
+    }
 
     .cta {
       display: inline-block;
@@ -103,10 +142,14 @@
       border-radius: 0.1em;
       border: 3px solid #DDDDDD;
       font-size: 0.5em;
+      text-decoration: none;
+      transition: background-color 300ms ease-out;
     }
 
-    .cta:link, .cta:hover, .cta:visited {
-      text-decoration: none;
+    .cta:hover,
+    .cta:focus,
+    .cta:active {
+        background-color: hsla(0, 100%, 100%, 0.2);
     }
 
     @media screen and (orientation:landscape) {
@@ -152,30 +195,30 @@
     <div class="viewport">
 
       <div class="one">
-        <div class="content">
+          <a href="https://medium.com/@kaelig/introducing-design-systems-ops-7f34c4561ba7#.s0l2kwuyn" class="content">
 
           <div class="text">
-            Read <a href="https://medium.com/@kaelig/introducing-design-systems-ops-7f34c4561ba7#.s0l2kwuyn">Introducing Design Systems Ops</a> on Medium
+            Read <strong>Introducing Design Systems Ops</strong> on Medium
           </div>
 
-        </div>
+        </a>
       </div>
 
       <div class="two">
-        <div class="content">
+        <a href="https://medium.com/@filtercake/design-ops-for-all-of-us-e3dd78c48b42#.mv8rkjlvm" class="content">
           <div class="text">
-            Read <a href="https://medium.com/@filtercake/design-ops-for-all-of-us-e3dd78c48b42#.mv8rkjlvm">Design Ops for all of us</a> on Medium
+            Read <strong>Design Ops for all of us</strong> on Medium
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="three">
-        <div class="content">
+        <a href="https://www.youtube.com/watch?v=-CRp5Cx7NZw" class="content">
           <div class="text">
-            Watch <a href="https://www.youtube.com/watch?v=-CRp5Cx7NZw">Living Design Systems</a> on YouTube
+            Watch <strong>Living Design Systems</strong> on YouTube
           </div>
 
-        </div>
+        </a>
       </div>
 
       <div class="four">
