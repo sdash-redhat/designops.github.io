@@ -17,7 +17,7 @@
         overflow-x: hidden;
       }
 
-    .one, .two, .three, .four {
+    .teaser {
       outline: 1px solid #001f3f;
       position: relative;
       padding: 1em;
@@ -28,19 +28,19 @@
 
     }
 
-    .one {
+    .introducing-design-systems-ops {
       background-image: url(https://cdn-images-1.medium.com/max/2000/1*RbwXg-OMlJTG7iiHs4NMQg.jpeg);
     }
-    .two {
+    .design-ops-for-all-of-us {
       background-image: url(https://cdn-images-1.medium.com/max/2000/1*lQ7MWNFHBp-fw_ZN4faW-g.jpeg);
     }
-    .three {
+    .living-design-systems {
       background-image: url(lds.png);
     }
-    .four {
+    .cta-teaser {
       background-image: url(laser.jpg);
     }
-    .four p {
+    .cta-teaser p {
       margin-top: 0;
     }
     .content {
@@ -87,7 +87,7 @@
         transform: scale(1.01);
     }
 
-    .four .content {
+    .cta-teaser .content {
       background-color: hsla(0, 0%, 0%, 0.7);
     }
 
@@ -155,7 +155,7 @@
     @media screen and (orientation:landscape) {
 
       html { font-size: 4vw; }
-        .one, .two, .three, .four {
+        .teaser {
         width: 50vw;
         height: 50vh;
         float: left;
@@ -165,7 +165,7 @@
         width: 100vw;
       }
 
-      .four .cta:nth-child(3) {
+      .cta-teaser .cta:nth-child(3) {
         margin-top: 0.5em;
       }
 
@@ -175,11 +175,11 @@
     @media screen and (orientation:portrait) {
       html { font-size: 6vw; }
 
-      .one, .two, .three, .four {
+      .teaser {
         height: 25vh;
       }
 
-      .four .cta:nth-child(3) {
+      .cta-teaser .cta:nth-child(3) {
         margin-left: 0.5em;
       }
 
@@ -194,7 +194,7 @@
 
     <div class="viewport">
 
-      <div class="one">
+      <div class="teaser introducing-design-systems-ops">
           <a href="https://medium.com/@kaelig/introducing-design-systems-ops-7f34c4561ba7#.s0l2kwuyn" class="content">
 
           <div class="text">
@@ -204,7 +204,7 @@
         </a>
       </div>
 
-      <div class="two">
+      <div class="teaser design-ops-for-all-of-us">
         <a href="https://medium.com/@filtercake/design-ops-for-all-of-us-e3dd78c48b42#.mv8rkjlvm" class="content">
           <div class="text">
             Read <strong>Design Ops for all of us</strong> on Medium
@@ -212,7 +212,7 @@
         </a>
       </div>
 
-      <div class="three">
+      <div class="teaser living-design-systems">
         <a href="https://www.youtube.com/watch?v=-CRp5Cx7NZw" class="content">
           <div class="text">
             Watch <strong>Living Design Systems</strong> on YouTube
@@ -221,7 +221,7 @@
         </a>
       </div>
 
-      <div class="four">
+      <div class="teaser cta-teaser">
         <div class="content">
           <div class="text">
             <p>What is DesignOps?</p>
