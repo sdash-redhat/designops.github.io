@@ -1,0 +1,25 @@
+{
+  "name": "designops.github.io",
+  "version": "1.0.0",
+  "description": "### Setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files ./*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DesignOps/designops.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DesignOps/designops.github.io/issues"
+  },
+  "homepage": "https://github.com/DesignOps/designops.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+
+}
