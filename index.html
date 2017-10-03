@@ -31,10 +31,21 @@
       line-height: 1.3;
 
     }
-
-    .introducing-design-systems-ops {
-      background-image: url(https://cloud.githubusercontent.com/assets/170145/24078622/a06c68a0-0c72-11e7-8d00-1ec46b4cb259.jpeg);
+    .photocredit {
+      position: absolute;
+      bottom: 1em;
+      right: 2em;
+      transform-origin: bottom right;
+      transform: rotate(90deg);
+      font-size: 8px;
+      text-decoration: none;
+      opacity: 0.4;
+      text-align: right;
     }
+    .photocredit:hover {
+      opacity: 0.9;
+    }
+
     .design-ops-for-all-of-us {
       background-image: url(https://cloud.githubusercontent.com/assets/170145/24078620/a06ac46e-0c72-11e7-8ddb-70a74cb385b3.jpeg);
     }
@@ -210,17 +221,31 @@
 
   <body>
 
+
     <div class="viewport">
 
-      <div class="teaser introducing-design-systems-ops">
-          <a href="https://medium.com/@kaelig/introducing-design-systems-ops-7f34c4561ba7#.s0l2kwuyn" class="content">
-
+    {% for entry in site.links %}
+      <div class="teaser" style="background-image: url({{ entry.teaser_image }});">
+          <a href="{{ entry.href }}" class="content">
           <div class="text">
-            Read <strong>Introducing Design Systems Ops</strong>
-          </div>
+            {% if entry.type == "article" %}
+              Read <strong>{{ entry.title }}</strong>
+            {% endif %}
+            {% if entry.type == "event" %}
+              Attend the <strong>{{ entry.title }}</strong>
+            {% endif %}
+            {% if entry.type == "audio" %}
+              Listen to <strong>{{ entry.title }}</strong>
+            {% endif %}
 
+
+          </div>
         </a>
+        {% if entry.show_teaser_image_credits %}
+          <a class="photocredit" href="{{ entry.teaser_image_source }}">Photo by {{  entry.teaser_image_author }}, {{ entry.teaser_image_license}} </a>
+        {% endif %}
       </div>
+    {% endfor %}
 
       <div class="teaser design-ops-for-all-of-us">
         <a href="https://medium.com/@filtercake/design-ops-for-all-of-us-e3dd78c48b42#.mv8rkjlvm" class="content">
@@ -228,6 +253,7 @@
             Read <strong>Design Ops for all of us</strong>
           </div>
         </a>
+
       </div>
 
       <div class="teaser living-design-systems">

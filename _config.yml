@@ -1,3 +1,6 @@
 # Build settings
 name: DesignOps.org
-markdown: redcarpet
+markdown: kramdown
+
+collections:
+- links
